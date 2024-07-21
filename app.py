@@ -1,10 +1,8 @@
 import streamlit as st
 import pandas as pd
 import tensorflow as tf
-from tensorflow import keras
 from tensorflow.keras.models import load_model 
-from sklearn.model_selection import  train_test_split
-import matplotlib.pyplot as plt
+
 
 
 model = load_model('assets/new.h5', compile=False)
