@@ -7,7 +7,7 @@ from sklearn.model_selection import  train_test_split
 import matplotlib.pyplot as plt
 
 
-model = load_model('C:/Users/venka/OneDrive/Documents/CNN_WebApp/assets/new.h5', compile=False)
+model = load_model('assets/new.h5', compile=False)
 st.title('High Performance Liquid Chromotography Prediction')
 uploadedFile = st.file_uploader('Upload your CSV', type=['csv','xlsx'],accept_multiple_files=False,key="fileUploader")
 
