@@ -3,7 +3,6 @@ import pandas as pd
 import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras.models import load_model 
-from sklearn.model_selection import  train_test_split
 
 
 
@@ -17,9 +16,11 @@ if uploadedFile is not None:
     
     if 'active' in arr:
         X= data.drop(columns=['active','Sample_ID','Sample_ID_2'],axis=1)
-        
+        y = data['active']
+       
     elif 'Target_HPLC' in arr:
         X= data.drop(columns=['Target_HPLC','Sample_ID','Sample_ID_2'],axis=1)
+        y = data['Target_HPLC']
         
     else:
         X= data.drop(columns=['Sample_ID','Sample_ID_2'],axis=1)
